@@ -1,4 +1,4 @@
-package configuration;
+package com.haromerop.crudApi.ApiRestCrud.configuration;
 
 import java.io.IOException;
 
@@ -17,16 +17,16 @@ import org.springframework.web.filter.GenericFilterBean;
  * el cual se encarga de pasar el "request" a la clase utilidad JwtUtil
  * para que valide el token
  */
-public class JwtFilter extends GenericFilterBean{
+public class JwtFilter extends GenericFilterBean {
 
-	@Override
-	public void doFilter(ServletRequest request, ServletResponse response, FilterChain filterChain)
-			throws IOException, ServletException {
-		
-		Authentication authentication = JwtUtil.getAuthentication((HttpServletRequest) request);
-		
-		SecurityContextHolder.getContext().setAuthentication(authentication);
-		
-		filterChain.doFilter(request, response);
-	}
+    @Override
+    public void doFilter(ServletRequest request, ServletResponse response, FilterChain filterChain)
+            throws IOException, ServletException {
+
+        Authentication authentication = JwtUtil.getAuthentication((HttpServletRequest) request);
+
+        SecurityContextHolder.getContext().setAuthentication(authentication);
+
+        filterChain.doFilter(request, response);
+    }
 }

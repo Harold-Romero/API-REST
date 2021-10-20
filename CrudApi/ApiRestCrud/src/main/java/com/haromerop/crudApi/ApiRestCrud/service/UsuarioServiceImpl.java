@@ -3,7 +3,7 @@ package com.haromerop.crudApi.ApiRestCrud.service;
 import java.util.List;
 import java.util.Optional;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import com.haromerop.crudApi.ApiRestCrud.dto.UsuarioRequest;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -15,17 +15,30 @@ import com.haromerop.crudApi.ApiRestCrud.repository.UsuarioRepository;
 @Transactional
 public class UsuarioServiceImpl implements UsuarioService{
 
-	@Autowired
-	private UsuarioRepository repository;
-	
+	private final UsuarioRepository repository;
+
+	public UsuarioServiceImpl(UsuarioRepository repository) {
+		this.repository = repository;
+	}
+
 	@Override
-	public Usuario createUsuario(Usuario usuario) {
+	public Usuario createUsuario(UsuarioRequest usuarioRequest) {
+		Usuario usuario = new Usuario();
+		usuario.setNombresUsuario(usuarioRequest.getNombresUsuario());
+		usuario.setApellidosUsuario(usuarioRequest.getApellidosUsuario());
+		usuario.setTelefono(usuarioRequest.getTelefono());
+		usuario.setDireccion(usuarioRequest.getDireccion());
 		return repository.save(usuario);
 	}
 
 	@Override
-	public Usuario updateUsuario(Usuario usuario) {
-		Optional<Usuario> usuarioDb = this.repository.findById(usuario.getId());
+	public Usuario updateUsuario(UsuarioRequest usuarioRequest, Long id) {
+		Usuario usuario = new Usuario();
+		usuario.setNombresUsuario(usuarioRequest.getNombresUsuario());
+		usuario.setApellidosUsuario(usuarioRequest.getApellidosUsuario());
+		usuario.setTelefono(usuarioRequest.getTelefono());
+		usuario.setDireccion(usuarioRequest.getDireccion());
+		Optional<Usuario> usuarioDb = this.repository.findById(id);
 		
 		if (usuarioDb.isPresent()) {
 			Usuario usuarioUpdate = usuarioDb.get();
@@ -48,7 +61,7 @@ public class UsuarioServiceImpl implements UsuarioService{
 	}
 
 	@Override
-	public Usuario getUsuarioById(long usuarioId) {
+	public Usuario getUsuarioById(Long usuarioId) {
 		
 		Optional<Usuario> usuarioDb = this.repository.findById(usuarioId);
 		
@@ -60,7 +73,7 @@ public class UsuarioServiceImpl implements UsuarioService{
 	}
 
 	@Override
-	public void deleteUsuario(long usuarioId) {
+	public void deleteUsuario(Long usuarioId) {
 		Optional<Usuario> usuarioDb = this.repository.findById(usuarioId);
 		
 		if (usuarioDb.isPresent()) {

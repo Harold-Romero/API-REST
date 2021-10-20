@@ -17,30 +17,30 @@ import com.haromerop.crudApi.ApiRestCrud.exception.Violation;
 @ControllerAdvice
 class ErrorHandlingControllerAdvice {
 
-  @ExceptionHandler(ConstraintViolationException.class)
-  @ResponseStatus(HttpStatus.BAD_REQUEST)
-  @ResponseBody
-  ValidationErrorResponse onConstraintValidationException(
-      ConstraintViolationException e) {
-    ValidationErrorResponse error = new ValidationErrorResponse();
-    for (ConstraintViolation violation : e.getConstraintViolations()) {
-    	error.getViolations().add(
-        new Violation(violation.getPropertyPath().toString(), violation.getMessage()));
+    @ExceptionHandler(ConstraintViolationException.class)
+    @ResponseStatus(HttpStatus.BAD_REQUEST)
+    @ResponseBody
+    ValidationErrorResponse onConstraintValidationException(
+            ConstraintViolationException e) {
+        ValidationErrorResponse error = new ValidationErrorResponse();
+        for (ConstraintViolation violation : e.getConstraintViolations()) {
+            error.getViolations().add(
+                    new Violation(violation.getPropertyPath().toString(), violation.getMessage()));
+        }
+        return error;
     }
-    return error;
-  }
 
-  @ExceptionHandler(MethodArgumentNotValidException.class)
-  @ResponseStatus(HttpStatus.BAD_REQUEST)
-  @ResponseBody
-  ValidationErrorResponse onMethodArgumentNotValidException(
-      MethodArgumentNotValidException e) {
-    ValidationErrorResponse error = new ValidationErrorResponse();
-    for (FieldError fieldError : e.getBindingResult().getFieldErrors()) {
-      error.getViolations().add(
-        new Violation(fieldError.getField(), fieldError.getDefaultMessage()));
+    @ExceptionHandler(MethodArgumentNotValidException.class)
+    @ResponseStatus(HttpStatus.BAD_REQUEST)
+    @ResponseBody
+    ValidationErrorResponse onMethodArgumentNotValidException(
+            MethodArgumentNotValidException e) {
+        ValidationErrorResponse error = new ValidationErrorResponse();
+        for (FieldError fieldError : e.getBindingResult().getFieldErrors()) {
+            error.getViolations().add(
+                    new Violation(fieldError.getField(), fieldError.getDefaultMessage()));
+        }
+        return error;
     }
-    return error;
-  }
 
 }

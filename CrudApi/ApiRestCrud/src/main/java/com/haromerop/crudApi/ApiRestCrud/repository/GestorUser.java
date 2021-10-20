@@ -5,8 +5,8 @@ import org.springframework.stereotype.Repository;
 
 import com.haromerop.crudApi.ApiRestCrud.model.UserLogin;
 
-@Repository("gestorUser")
-public interface GestorUser extends JpaRepository<UserLogin, Long>{
-	
-	UserLogin findbyUser(String user);
+@Repository
+public interface GestorUser extends JpaRepository<UserLogin, Long> {
+
+    UserLogin findByUser(String user);
 }

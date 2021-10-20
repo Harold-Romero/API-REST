@@ -2,16 +2,17 @@ package com.haromerop.crudApi.ApiRestCrud.service;
 
 import java.util.List;
 
+import com.haromerop.crudApi.ApiRestCrud.dto.UsuarioRequest;
 import com.haromerop.crudApi.ApiRestCrud.model.Usuario;
 
 public interface UsuarioService {
-	Usuario createUsuario(Usuario usuario);
+	Usuario createUsuario(UsuarioRequest usuarioRequest);
 	
-	Usuario updateUsuario(Usuario usuario);
+	Usuario updateUsuario(UsuarioRequest usuarioRequest, Long Id);
 	
 	List<Usuario> getAllUsuario();
 	
-	Usuario getUsuarioById(long usuarioId);
+	Usuario getUsuarioById(Long usuarioId);
 	
-	void deleteUsuario(long id);
+	void deleteUsuario(Long id);
 }

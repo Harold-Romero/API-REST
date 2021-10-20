@@ -3,8 +3,6 @@ package com.haromerop.crudApi.ApiRestCrud.service;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.User;
@@ -16,16 +14,18 @@ import org.springframework.stereotype.Service;
 import com.haromerop.crudApi.ApiRestCrud.model.UserLogin;
 import com.haromerop.crudApi.ApiRestCrud.repository.GestorUser;
 
-@Service("userService")
+@Service
 public class UserService implements UserDetailsService{
 	
-	@Autowired
-	@Qualifier("gestorUser")
-	private GestorUser repo;
+	private final GestorUser repo;
+
+	public UserService(GestorUser repo) {
+		this.repo = repo;
+	}
 
 	@Override
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-		UserLogin user = repo.findbyUser(username);
+		UserLogin user = repo.findByUser(username);
 		return new User(user.getUser(), user.getPass(), user.isSession(), user.isSession(), user.isSession(), user.isSession(), buildgrante(user.getRol()));
 	}
 	
