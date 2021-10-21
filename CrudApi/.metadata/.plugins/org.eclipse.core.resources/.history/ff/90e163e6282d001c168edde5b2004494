@@ -1,5 +1,0 @@
-package com.haromerop.crudApi.ApiRestCrud.validator;
-
-public class UserValidatorImpl {
-
-}

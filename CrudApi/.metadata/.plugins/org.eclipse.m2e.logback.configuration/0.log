@@ -4093,3 +4093,4 @@
 2021-10-21 16:06:01,707 [Worker-130: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
 2021-10-21 16:06:01,709 [Worker-130: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2021-10-21 16:06:01,709 [Worker-130: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2021-10-21 16:06:01,709 [Worker-130: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Harold Romero\OneDrive\Documents\Trabajo\repositorio\API-REST\CrudApi\ApiRestCrud\src\test\resources

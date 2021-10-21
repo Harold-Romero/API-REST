@@ -1,8 +1,0 @@
-package com.haromerop.crudApi.ApiRestCrud.exception;
-
-public class ApiNotFound extends Exception{
-	
-	public ApiNotFound() {
-		
-	}
-}
