@@ -1,0 +1,39 @@
+package com.haromerop.crudApi.ApiRestCrud.service;
+
+import javax.transaction.Transactional;
+
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.stereotype.Service;
+
+import com.haromerop.crudApi.ApiRestCrud.dto.UserLoginRequest;
+import com.haromerop.crudApi.ApiRestCrud.model.UserLogin;
+import com.haromerop.crudApi.ApiRestCrud.repository.UserLoginRepository;
+
+@Service
+@Transactional
+public class UserLoginServiceImpl implements UserLoginService {
+	
+	private final UserLoginRepository repository;
+
+	public UserLoginServiceImpl(UserLoginRepository repository) {
+		this.repository = repository;
+	}
+	
+	@Override
+	public UserLogin createUser(UserLoginRequest userRequest) {
+		
+		String pass = userRequest.getPass();
+		String passEncript = ;
+		
+		UserLogin user = new UserLogin();
+		user.setUser(userRequest.getUser());
+		user.setPass(userRequest.passEncript);
+		user.setRol(userRequest.getRol());
+		return repository.save(user);
+	}
+	
+	public PasswordEncoder passwordEncoder() {
+		return new BCryptPasswordEncoder();
+	}
+}

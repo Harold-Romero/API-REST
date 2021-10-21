@@ -1,0 +1,4 @@
+good.morning.message=Good Morning
+
+user.entity.firstname.empty=The name in not empty
+user.entity.firstname.lenght= You must send a name between 3 characters and 15 characters...

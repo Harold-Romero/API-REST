@@ -1,0 +1,20 @@
+package com.haromerop.crudApi.ApiRestCrud.exception;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class ValidationErrorResponse {
+	private List<Violation> violations = new ArrayList<>();
+	
+	public ValidationErrorResponse(String val1, String val2) {
+		
+	}
+	
+	public List<Violation> getViolations() {
+		return violations;
+	}
+
+	public void setViolations(List<Violation> violations) {
+		this.violations = violations;
+	}
+}

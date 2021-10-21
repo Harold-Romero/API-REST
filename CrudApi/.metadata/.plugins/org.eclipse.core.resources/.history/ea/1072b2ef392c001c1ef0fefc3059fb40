@@ -1,0 +1,51 @@
+package com.haromerop.crudApi.ApiRestCrud.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.haromerop.crudApi.ApiRestCrud.model.Usuario;
+import com.haromerop.crudApi.ApiRestCrud.service.UsuarioService;
+
+@RestController
+public class UsuarioController {
+	
+	@Autowired
+	private UsuarioService usuarioService;
+	
+	@GetMapping("/usuarios")
+	public ResponseEntity<List<Usuario>> getAllUsuarios(){
+		return ResponseEntity.ok(usuarioService.getAllUsuario());
+	}
+	
+	@GetMapping("/usuarios/{id}")
+	public ResponseEntity<Usuario> getUsuarioById(@PathVariable long id){
+		return ResponseEntity.ok(usuarioService.getUsuarioById(id));
+	}
+	
+	@PostMapping("/usuarios")
+	public ResponseEntity<Usuario> createUsuario(@RequestBody Usuario usuario){
+		return ResponseEntity.ok().body(this.usuarioService.createUsuario(usuario));
+	}
+	
+	@PutMapping("/usuarios/{id}")
+	public ResponseEntity<Usuario> updateUsuario(@PathVariable long id, @RequestBody Usuario usuario){
+		usuario.setId(id);
+		return ResponseEntity.ok().body(this.usuarioService.updateUsuario(usuario));
+	}
+	
+	@DeleteMapping("/usuarios/{id}")
+	public HttpStatus deleteUsuario(@PathVariable long id){
+		this.usuarioService.deleteUsuario(id);
+		return HttpStatus.OK;
+	}
+}

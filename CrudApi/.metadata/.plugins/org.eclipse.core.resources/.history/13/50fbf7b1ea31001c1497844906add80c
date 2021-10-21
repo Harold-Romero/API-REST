@@ -1,0 +1,17 @@
+package com.haromerop.crudApi.ApiRestCrud.service;
+
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+public class EstadoServiceTest {
+	
+	@BeforeEach
+	void setup() {
+		
+	}
+	
+	@Test
+	void findAll() {
+		
+	}
+}

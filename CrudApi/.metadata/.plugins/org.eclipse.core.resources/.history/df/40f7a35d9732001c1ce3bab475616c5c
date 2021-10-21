@@ -1,0 +1,4 @@
+good.morning.message=Buenos dias
+
+user.entity.firstname.empty=El nombre no puede estar vacío
+user.entity.firstname.lenght= Debe enviar un nombre entre 3 carácteres y 15 carácteres...

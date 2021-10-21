@@ -22,7 +22,7 @@ import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
 
-@Api(value = "Controlador de usuarios", tags = "Rest Api que Controla las acciones para consultar, crear, modificar y eliminar usuarios")
+@Api(value = "{user.controller.api}", tags = "{user.controller.api.tags}")
 @RestController
 @RequestMapping("/usuarios")
 public class UsuarioController {
@@ -37,24 +37,24 @@ public class UsuarioController {
 		this.messageSource = messageSource;
 	}
 
-	@ApiOperation(value = "Devuelve toda la lista de Base de Datos", response = ResponseEntity.class, tags = "Datos de todos los usuarios")
+	@ApiOperation(value = "{user.controller.apioperations.getall}", response = ResponseEntity.class, tags = "{user.controller.apioperations.getall.tags}")
 	@ApiResponses(value={
-			@ApiResponse(code = 200, message = "Operación exitosa aquí están los usuarios registrados..."),
-			@ApiResponse(code = 401, message = "Credenciales No Autorizadas..."),
-			@ApiResponse(code = 403, message = "forbidden!!!"),
-			@ApiResponse(code = 404, message = "La dirección web no se encuentra...")
+			@ApiResponse(code = 200, message = "{user.apiresponse.200.all}"),
+			@ApiResponse(code = 401, message = "{user.apiresponse.401}"),
+			@ApiResponse(code = 403, message = "{user.apiresponse.403}"),
+			@ApiResponse(code = 404, message = "{user.apiresponse.404}")
 	})
 	@GetMapping
 	public ResponseEntity<List<Usuario>> getAllUsuarios(){
 			return ResponseEntity.ok(usuarioService.getAllUsuario());
 	}
 	
-	@ApiOperation(value = "Devuelve un usuario en específico de la Base de Datos", response = ResponseEntity.class, tags = "Datos por el id del usuario")
+	@ApiOperation(value = "{user.controller.apioperations.getbyid}", response = ResponseEntity.class, tags = "{user.controller.apioperations.getbyid.tags}")
 	@ApiResponses(value={
-			@ApiResponse(code = 200, message = "Operación exitosa aquí está su usuario solicitado..."),
-			@ApiResponse(code = 401, message = "Credenciales No Autorizadas..."),
-			@ApiResponse(code = 403, message = "forbidden!!!"),
-			@ApiResponse(code = 404, message = "La dirección web no se encuentra...")
+			@ApiResponse(code = 200, message = "{user.apiresponse.200.byid}"),
+			@ApiResponse(code = 401, message = "{user.apiresponse.401}"),
+			@ApiResponse(code = 403, message = "{user.apiresponse.403}"),
+			@ApiResponse(code = 404, message = "{user.apiresponse.404}")
 	})
 	@GetMapping("/{id}")
 	public ResponseEntity<Object> getUsuarioById(@PathVariable long id){
@@ -65,24 +65,24 @@ public class UsuarioController {
 		}
 	}
 	
-	@ApiOperation(value = "Crea usuarios en la Base de Datos", response = ResponseEntity.class, tags = "Crear un usuario")
+	@ApiOperation(value = "{user.controller.apioperations.create}", response = ResponseEntity.class, tags = "{user.controller.apioperations.create.tags}")
 	@ApiResponses(value={
-			@ApiResponse(code = 200, message = "Operación exitosa, usuario creado con éxito..."),
-			@ApiResponse(code = 401, message = "Credenciales No Autorizadas..."),
-			@ApiResponse(code = 403, message = "forbidden!!!"),
-			@ApiResponse(code = 404, message = "La dirección web no se encuentra...")
+			@ApiResponse(code = 200, message = "{user.apiresponse.200.create}"),
+			@ApiResponse(code = 401, message = "{user.apiresponse.401}"),
+			@ApiResponse(code = 403, message = "{user.apiresponse.403}"),
+			@ApiResponse(code = 404, message = "{user.apiresponse.404}")
 	})
 	@PostMapping
 	public ResponseEntity<Usuario> createUsuario(@Valid @RequestBody UsuarioRequest usuario) throws ApiUnprocessableEntity{
 		return ResponseEntity.ok().body(this.usuarioService.createUsuario(usuario));
 	}
 	
-	@ApiOperation(value = "Actualiza los datos de un usuario específico en la Base de Datos", response = ResponseEntity.class, tags = "Actualizar un usuario")
+	@ApiOperation(value = "{user.controller.apioperations.update}", response = ResponseEntity.class, tags = "{user.controller.apioperations.update.tags}")
 	@ApiResponses(value={
-			@ApiResponse(code = 200, message = "Operación exitosa, usuario actualizado con éxito..."),
-			@ApiResponse(code = 401, message = "Credenciales No Autorizadas..."),
-			@ApiResponse(code = 403, message = "forbidden!!!"),
-			@ApiResponse(code = 404, message = "La dirección web no se encuentra...")
+			@ApiResponse(code = 200, message = "{user.apiresponse.200.update}"),
+			@ApiResponse(code = 401, message = "{user.apiresponse.401}"),
+			@ApiResponse(code = 403, message = "{user.apiresponse.403}"),
+			@ApiResponse(code = 404, message = "{user.apiresponse.404}")
 	})
 	@PutMapping("/{id}")
 	public ResponseEntity<Object> updateUsuario(@PathVariable Long id, @RequestBody UsuarioRequest usuarioRequest) throws ApiUnprocessableEntity{

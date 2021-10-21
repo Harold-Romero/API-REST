@@ -1,0 +1,17 @@
+package com.haromerop.crudApi.ApiRestCrud;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+import com.haromerop.crudApi.ApiRestCrud.model.UserLogin;
+
+@SpringBootApplication
+public class ApiRestCrudApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(ApiRestCrudApplication.class, args);
+		
+		//UserLogin user = new UserLogin("Jrojas", "123456", (byte) 1, true);
+		//UserLogin user1 = new UserLogin("Phortua", "987654", (byte) 2, true);
+	}
+}

@@ -1,0 +1,12 @@
+package configuration;
+
+/**
+ * Las peticiones que no sean /login pasarán por este filtro
+ * el cual se encarga de pasar el "request" a la clase utilidad JwtUtil
+ * para que valide el token
+ * @author Harold Romero
+ *
+ */
+public class JwtFilter {
+
+}

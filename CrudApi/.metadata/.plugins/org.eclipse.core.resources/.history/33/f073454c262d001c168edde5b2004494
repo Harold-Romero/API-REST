@@ -1,0 +1,7 @@
+package com.haromerop.crudApi.ApiRestCrud.exception;
+
+public class ApiUnprocessableEntity extends Exception{
+
+	private static final long serialVersionUID = 1L;
+
+}

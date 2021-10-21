@@ -1,0 +1,5 @@
+package com.haromerop.crudApi.ApiRestCrud.validator;
+
+public interface UsuarioValidator {
+
+}

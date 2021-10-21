@@ -1,0 +1,12 @@
+package com.haromerop.crudApi.ApiRestCrud.validator;
+
+import org.springframework.stereotype.Service;
+
+import com.haromerop.crudApi.ApiRestCrud.exception.ApiUnprocessableEntity;
+import com.haromerop.crudApi.ApiRestCrud.repository.UsuarioRepository;
+
+@Service
+public interface UsuarioValidator {
+	
+	void validator(Usuario) throws ApiUnprocessableEntity;
+}

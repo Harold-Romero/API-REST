@@ -1,0 +1,13 @@
+package com.haromerop.crudApi.ApiRestCrud.dto;
+
+import lombok.Data;
+
+@Data
+public class UserLoginRequest {
+	
+	private String user;
+	private String pass;
+	private byte rol;
+	private boolean session;
+	
+}

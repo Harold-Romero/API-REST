@@ -1,0 +1,14 @@
+package com.haromerop.crudApi.ApiRestCrud.repository;
+
+import java.io.Serializable;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import com.haromerop.crudApi.ApiRestCrud.model.UserLogin;
+
+@Repository("gestorUser")
+public interface GestorUser extends JpaRepository<UserLogin, long>{
+	
+	public abstract UserLogin findbyUser(String user);
+}

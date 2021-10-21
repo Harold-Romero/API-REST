@@ -1,0 +1,39 @@
+package com.haromerop.crudApi.ApiRestCrud.model;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+import io.swagger.annotations.ApiModelProperty;
+
+@Entity
+@Table(name = "tbl_userlogin")
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+public class UserLogin{
+	
+	@Id
+	@Column(name="idusername")
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	@ApiModelProperty(notes = "id del usuario",name="nombre",required=true,value="Id del usuario")
+	@Column(name = "idUser", unique = true)
+	private Long id;
+	@Column(name = "user", unique  = true)
+	private String user;
+	@Column(name = "pass")
+	private String pass;
+	@Column(name = "rol")
+	private byte rol;
+	@Column(name = "session")
+	private boolean session;
+	
+	
+}

@@ -1,0 +1,33 @@
+package com.haromerop.crudApi.ApiRestCrud.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.userdetails.User;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.stereotype.Service;
+
+import com.haromerop.crudApi.ApiRestCrud.model.UserLogin;
+import com.haromerop.crudApi.ApiRestCrud.repository.GestorUser;
+
+@Service("userService")
+public class UserService implements UserDetailsService{
+	
+	@Autowired
+	@Qualifier("gestorUser")
+	private GestorUser repo;
+
+	@Override
+	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+		UserLogin user = repo.findbyUser(username);
+		return new User(user.getUser(), user.getPass(), user.isSession(), user.isSession(), );
+	}
+	
+	public List<GrantedAuthority> buildgrante(byte rol){
+		
+	}
+}

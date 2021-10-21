@@ -1,0 +1,38 @@
+good.morning.message=Good Morning
+
+! Messages for user names
+user.entity.firstname.apimodelproperty = User name
+user.entity.firstname.empty = Name cannot be empty
+user.entity.firstname.length = You must send a name between 3 characters and 15 characters...
+user.entity.firstname.pattern = You must send only letters in the name
+
+! Messages for user names
+user.entity.lastname.apimodelproperty = User lastname
+user.entity.lastname.empty = Last name cannot be empty
+user.entity.lastname.length = You must send a lastname between 3 characters and 15 characters...
+user.entity.lastname.pattern = You must send only letters in the lastname
+
+! User's phone messages
+user.entity.telephone.apimodelproperty = User's phone
+user.entity.telephone.empty = The phone cannot be empty
+user.entity.telephone.length = You must send a phone between 7 characters and 15 characters ...
+user.entity.telephone.pattern = You must send only numbers for the phone
+
+! Messages for the user's address
+user.entity.address.apimodelproperty = User's address
+user.entity.address.empty = Address cannot be empty
+user.entity.address.length = You must send an address between 9 characters and 30 characters ...
+
+! Messages for user names
+user.entity.username.apimodelproperty = IdUserName
+user.entity.username.empty = username cannot be empty
+user.entity.username.length = You must send a username between 3 characters and 8 characters...
+user.entity.username.pattern = You must send only letters in the username
+
+user.controller.api = Controlador de usuarios
+user.controller.api.tags = Rest Api que Controla las acciones para consultar, crear, modificar y eliminar usuarios
+
+user.controller.apioperations.getall = Devuelve toda la lista de Base de Datos
+user.controller.apioperations.getall.tags = Datos de todos los usuarios
+
+user.apiresponse.getall = Operación exitosa aquí están los usuarios registrados...

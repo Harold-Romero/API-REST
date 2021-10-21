@@ -1,0 +1,8 @@
+package com.haromerop.crudApi.ApiRestCrud.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+
+public class UserLoginRepository extends JpaRepository<UserLogin, Long>{
+	
+}

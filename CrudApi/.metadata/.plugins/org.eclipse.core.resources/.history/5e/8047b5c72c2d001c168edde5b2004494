@@ -1,0 +1,37 @@
+package com.haromerop.crudApi.ApiRestCrud.validator;
+
+import org.springframework.stereotype.Component;
+
+import com.haromerop.crudApi.ApiRestCrud.exception.ApiUnprocessableEntity;
+import com.haromerop.crudApi.ApiRestCrud.model.Usuario;
+
+@Component
+public class UserValidatorImpl implements UsuarioValidator{
+
+	@Override
+	public void validator(Usuario usuario) throws ApiUnprocessableEntity {
+		 
+		if(usuario.getNombresUsuario() == null || usuario.getNombresUsuario().isEmpty()) {
+			this.message("Todos los campos son obligatorios");
+		}else if(usuario.getApellidosUsuario() == null || usuario.getApellidosUsuario().isEmpty()){
+			this.message("Todos los campos son obligatorios");
+		}else if(usuario.getTelefono() == null || usuario.getTelefono().isEmpty()){
+		
+			this.message("Todos los campos son obligatorios");
+		
+		}else if(usuario.getDireccion() == null || usuario.getDireccion().isEmpty()){
+		
+			this.message("Todos los campos son obligatorios");
+		}
+		
+		if(usuario.getNombresUsuario().length() < 3) {
+			this.message("El nombre es muy corto, debe tener mínimo 3 caracteres");
+		}
+	}
+	
+	private void message (String message) throws ApiUnprocessableEntity{
+		
+		throw new ApiUnprocessableEntity(message);
+	}
+
+}
