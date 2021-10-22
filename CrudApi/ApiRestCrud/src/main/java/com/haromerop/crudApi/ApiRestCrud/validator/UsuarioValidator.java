@@ -7,12 +7,12 @@ import com.haromerop.crudApi.ApiRestCrud.model.Usuario;
 
 /**
  * Interface para la validación de datos recibidos para la creación de usuarios
- * @author Harold Romero
  *
+ * @author Harold Romero
  */
 
 @Service
 public interface UsuarioValidator {
-	
-	void validator(Usuario usuario) throws ApiUnprocessableEntity;
+
+    void validator(Usuario usuario) throws ApiUnprocessableEntity;
 }

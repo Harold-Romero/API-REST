@@ -1,0 +1,31 @@
+2021-10-21 17:45:22,287 [Worker-4: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2021-10-22 07:08:11,281 [Worker-2: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2021-10-22 07:08:36,058 [Worker-12: Updating Maven Dependencies] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.haromerop.crudApi:ApiRestCrud:0.0.1-SNAPSHOT @ C:\Users\Harold Romero\OneDrive\Documents\Trabajo\Repo\API-REST\CrudApi\ApiRestCrud\pom.xml.
+2021-10-22 07:08:36,503 [Worker-12: Updating Maven Dependencies] WARN  o.e.m.c.i.embedder.EclipseLogger - The artifact org.hibernate:hibernate-validator:jar:6.0.13.Final has been relocated to org.hibernate.validator:hibernate-validator:jar:6.0.13.Final
+2021-10-22 07:08:36,942 [Worker-19: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.haromerop.crudApi:ApiRestCrud:0.0.1-SNAPSHOT @ C:\Users\Harold Romero\OneDrive\Documents\Trabajo\Repo\API-REST\CrudApi\ApiRestCrud\pom.xml.
+2021-10-22 07:08:37,237 [Worker-19: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The artifact org.hibernate:hibernate-validator:jar:6.0.13.Final has been relocated to org.hibernate.validator:hibernate-validator:jar:6.0.13.Final
+2021-10-22 07:08:38,031 [Worker-19: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-10-22 07:08:38,032 [Worker-19: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2021-10-22 07:08:38,037 [Worker-19: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-10-22 07:08:38,061 [Worker-19: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2021-10-22 07:08:38,078 [Worker-19: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-10-22 07:08:38,078 [Worker-19: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2021-10-22 07:08:38,078 [Worker-19: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Harold Romero\OneDrive\Documents\Trabajo\Repo\API-REST\CrudApi\ApiRestCrud\src\test\resources
+2021-10-22 07:08:39,604 [Worker-13: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The artifact org.hibernate:hibernate-validator:jar:6.0.13.Final has been relocated to org.hibernate.validator:hibernate-validator:jar:6.0.13.Final
+2021-10-22 07:08:39,834 [Worker-13: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-10-22 07:08:39,834 [Worker-13: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2021-10-22 07:08:39,841 [Worker-13: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-10-22 07:08:39,863 [Worker-13: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2021-10-22 07:08:40,059 [Worker-13: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-10-22 07:08:40,059 [Worker-4: Updating Maven Dependencies] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.haromerop.crudApi:ApiRestCrud:0.0.1-SNAPSHOT @ C:\Users\Harold Romero\OneDrive\Documents\Trabajo\Repo\API-REST\CrudApi\ApiRestCrud\pom.xml.
+2021-10-22 07:08:40,059 [Worker-13: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2021-10-22 07:08:40,060 [Worker-13: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Harold Romero\OneDrive\Documents\Trabajo\Repo\API-REST\CrudApi\ApiRestCrud\src\test\resources
+2021-10-22 07:08:40,355 [Worker-4: Updating Maven Dependencies] WARN  o.e.m.c.i.embedder.EclipseLogger - The artifact org.hibernate:hibernate-validator:jar:6.0.13.Final has been relocated to org.hibernate.validator:hibernate-validator:jar:6.0.13.Final
+2021-10-22 07:08:41,949 [Worker-14: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The artifact org.hibernate:hibernate-validator:jar:6.0.13.Final has been relocated to org.hibernate.validator:hibernate-validator:jar:6.0.13.Final
+2021-10-22 07:08:41,992 [Worker-14: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-10-22 07:08:41,992 [Worker-14: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2021-10-22 07:08:41,993 [Worker-14: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2021-10-22 07:08:41,993 [Worker-14: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2021-10-22 07:08:41,996 [Worker-14: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-10-22 07:08:41,996 [Worker-14: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2021-10-22 07:08:41,996 [Worker-14: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Harold Romero\OneDrive\Documents\Trabajo\Repo\API-REST\CrudApi\ApiRestCrud\src\test\resources

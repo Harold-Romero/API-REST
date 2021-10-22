@@ -14,24 +14,24 @@ import lombok.NoArgsConstructor;
 import io.swagger.annotations.ApiModelProperty;
 
 @Entity
-@Table(name="tbl_usuario")
+@Table(name = "tbl_usuario")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 public class Usuario {
-	
-	@Id
-	@Column(name="id_usuario")
-	@GeneratedValue(strategy = GenerationType.AUTO)
-	@ApiModelProperty(notes = "id del usuario",name="nombre",required=true,value="Id del usuario")
-	private Long id;
-	
-	private String nombresUsuario;
 
-	private String apellidosUsuario;
+    @Id
+    @Column(name = "id_usuario")
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @ApiModelProperty(notes = "id del usuario", name = "nombre", required = true, value = "Id del usuario")
+    private Long id;
 
-	private String telefono;
+    private String nombresUsuario;
 
-	private String direccion;
-	
+    private String apellidosUsuario;
+
+    private String telefono;
+
+    private String direccion;
+
 }

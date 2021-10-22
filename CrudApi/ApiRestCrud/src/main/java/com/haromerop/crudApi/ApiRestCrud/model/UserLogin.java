@@ -11,19 +11,19 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "tbl_userlogin")
 @Data
-public class UserLogin{
-	
-	@Id
-	@GeneratedValue
-	@Column(name = "idUser", unique = true)
-	private Long id;
-	@Column(name = "user", unique  = true)
-	private String user;
-	@Column(name = "pass")
-	private String pass;
-	@Column(name = "rol")
-	private byte rol;
-	@Column(name = "session")
-	private boolean session;
+public class UserLogin {
+
+    @Id
+    @GeneratedValue
+    @Column(name = "idUser", unique = true)
+    private Long id;
+    @Column(name = "user", unique = true)
+    private String user;
+    @Column(name = "pass")
+    private String pass;
+    @Column(name = "rol")
+    private byte rol;
+    @Column(name = "session")
+    private boolean session;
 
 }
