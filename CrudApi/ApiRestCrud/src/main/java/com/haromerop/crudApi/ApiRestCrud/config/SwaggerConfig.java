@@ -1,7 +1,5 @@
 package com.haromerop.crudApi.ApiRestCrud.config;
 
-import java.util.function.Predicate;
-
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
