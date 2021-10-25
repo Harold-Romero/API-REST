@@ -1,0 +1,31 @@
+package com.haromerop.crudApi.ApiRestCrud.dto;
+
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.Pattern;
+
+import org.hibernate.validator.constraints.Length;
+
+import io.swagger.annotations.ApiModelProperty;
+import lombok.Data;
+
+@Data
+public class UserLoginRequest {
+	
+	@ApiModelProperty(notes = "{userLogin.entity.username.apimodelproperty}", name="nombre", required=true, value="{userLogin.entity.firstname.apimodelproperty}")
+    @NotEmpty(message = "{userLogin.entity.username.empty}")
+    @Length(min = 3, max = 15, message = "{userLogin.entity.username.length}")
+    @Pattern(regexp = "[A-Za-z]+", message = "{userLogin.entity.username.pattern}")
+	private String user;
+	
+	@ApiModelProperty(notes = "{userLogin.entity.pass.apimodelproperty}", name="nombre", required=true, value="{userLogin.entity.pass.apimodelproperty}")
+	@NotEmpty(message = "{userLogin.entity.pass.empty}")
+	@Pattern(regexp = "[^(?=\\w*\\d)(?=\\w*[A-Z])(?=\\w*[a-z])\\S{8,16}$]+", message = "{userLogin.entity.pass.pattern}")
+	private String pass;
+	
+	@ApiModelProperty(notes = "{userLogin.entity.rol.apimodelproperty}", name="nombre", required=true, value="{userLogin.entity.rol.apimodelproperty}")
+	@NotEmpty(message = "{userLogin.entity.rol.empty}")
+	@Length(min = 3, max = 15, message = "{userLogin.entity.username.length}")
+	@Pattern(regexp = "[A-Za-z]+", message = "{userLogin.entity.username.pattern}")	
+	private String rol;
+	
+}

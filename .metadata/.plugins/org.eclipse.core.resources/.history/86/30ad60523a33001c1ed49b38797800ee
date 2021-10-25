@@ -1,0 +1,11 @@
+good.morning.message=Good Morning
+
+user.entity.firstname.apimodelproperty = User name
+user.entity.firstname.empty = Name cannot be empty
+user.entity.firstname.length = You must send a name between 3 characters and 15 characters ...
+user.entity.firstname.pattern = You must send only letters in the name
+
+user.entity.lastname.apimodelproperty = User last name
+user.entity.lastname.empty = Last name cannot be empty
+user.entity.lastname.length = You must send a surname between 3 characters and 15 characters ...
+user.entity.lastname.pattern = You must send only letters in the last name

@@ -1,0 +1,60 @@
+good.morning.message=Buenos dias
+
+user.entity.firstname.apimodelproperty = Nombre del usuario
+user.entity.firstname.empty = El nombre no puede estar vacio
+user.entity.firstname.length = Debe enviar un nombre entre 3 caracteres y 15 caracteres ...
+user.entity.firstname.pattern = Debe enviar solo letras en el nombre
+
+user.entity.lastname.apimodelproperty = Apellido del usuario
+user.entity.lastname.empty = El apellido no puede estar vacio
+user.entity.lastname.length = Debe enviar un apellido entre 3 caracteres y 15 caracteres ...
+user.entity.lastname.pattern = Debe enviar solo letras en el apellido
+
+user.entity.telephone.apimodelproperty = Telefono del usuario
+user.entity.telephone.empty = El telefono no puede estar vacio
+user.entity.telephone.length = Debe enviar un telefono entre 7 caracteres y 15 caracteres ...
+user.entity.telephone.pattern = Debe enviar solo numeros en el telefono
+
+user.entity.address.apimodelproperty = Direccion del usuario
+user.entity.address.empty = La direccion no puede estar vacia
+user.entity.address.length = Debe enviar una direccion entre 9 caracteres y 30 caracteres ...
+
+user.controller.response.200 = Operacion realizada con exito ...
+user.controller.response.401 = Credenciales No Autorizadas ...
+user.controller.response.403 = forbidden !!!
+user.controller.response.404 = La direccion web no se encuentra ...
+
+user.controller.api = Controlador de usuarios
+user.controller.apioperation.all = Devuelve toda la lista de Base de Datos
+user.controller.apioperation.byid = Devuelve un usuario en especifico de la Base de Datos
+user.controller.apioperation.create = Crea usuarios en la Base de Datos
+user.controller.apioperation.update = Actualiza los datos de un usuario especifico en la Base de Datos
+user.controller.apioperation.delete = Elimina un usuario en especifico en la Base de Datos
+user.controller.apioperation.hi = Devuelve un saludo
+
+user.controller.api.tags = Rest Api que Controla las acciones para consultar, crear, modificar y eliminar usuarios
+user.controller.apioperation.tags.all = Datos de todos los usuarios
+user.controller.apioperation.tags.byid = Datos por el id del usuario
+user.controller.apioperation.tags.create = Crear un usuario
+user.controller.apioperation.tags.update = Actualizar un usuario
+user.controller.apioperation.tags.delete = Eliminar un usuario
+
+user.service.impl.iduser = Usuario no registrado con id digitado: 
+
+userlogin.entity.username.apimodelproperty = Nombre de usuario en plataforma
+userlogin.entity.username.empty = El nombre de usuario no puede estar vacio
+userlogin.entity.username.length = Debe enviar un nombre de usuario entre 8 caracteres y 15 caracteres ...
+userlogin.entity.username.pattern = Debe enviar solo letras en el nombre de usuario, sin espacios ni caracteres especiales
+
+userlogin.entity.pass.apimodelproperty = Contraseña
+userlogin.entity.pass.empty = La contraseña no puede estar vacia
+userlogin.entity.pass.pattern = La contraseña debe tener al entre 8 y 16 caracteres, al menos un dígito, al menos una minúscula y al menos una mayúscula, puede tener otros simbolos.
+
+userlogin.entity.rol.apimodelproperty = Rol del usuario
+userlogin.entity.rol.empty = El rol del usuario no puede estar vacio
+userlogin.entity.rol.length = Debe tener solo un numero de rol
+userlogin.entity.rol.pattern = Debe enviar solo un numero del 0 al 2 dependiendo de su rol
+
+userlogin.controller.api = Creador de usuarios autorizados
+userlogin.controller.apioperation.create = Crea usuarios autorizados
+userlogin.controller.apioperation.tags.create = Crea usuarios para autorizar el uso de la API

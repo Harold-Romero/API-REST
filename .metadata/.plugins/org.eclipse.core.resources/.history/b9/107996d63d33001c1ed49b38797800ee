@@ -1,0 +1,40 @@
+good.morning.message=Good Morning
+
+user.entity.firstname.apimodelproperty = User name
+user.entity.firstname.empty = Name cannot be empty
+user.entity.firstname.length = You must send a name between 3 characters and 15 characters ...
+user.entity.firstname.pattern = You must send only letters in the name
+
+user.entity.lastname.apimodelproperty = User last name
+user.entity.lastname.empty = Last name cannot be empty
+user.entity.lastname.length = You must send a surname between 3 characters and 15 characters ...
+user.entity.lastname.pattern = You must send only letters in the last name
+
+user.entity.telephone.apimodelproperty = User's phone
+user.entity.telephone.empty = The phone cannot be empty
+user.entity.telephone.length = You must send a phone between 7 characters and 15 characters ...
+user.entity.telephone.pattern = You must send numbers on the phone
+
+user.entity.address.apimodelproperty = User's address
+user.entity.address.empty = The address cannot be empty
+user.entity.address.length = You must send an address between 9 characters and 30 characters ...
+
+user.controller.response.200 = Operation successful ...
+user.controller.response.401 = Unauthorized Credentials ...
+user.controller.response.403 = forbidden !!!
+user.controller.response.404 = The web address cannot be found ...
+
+user.controller.api = User Controller
+user.controller.apioperation.all = Returns the entire Database list
+user.controller.apioperation.byid = Returns a specific user from the Database
+user.controller.apioperation.create = Create users in the Database
+user.controller.apioperation.update = Update the data of a specific user in the Database
+user.controller.apioperation.delete = Delete a specific user in the Database
+user.controller.apioperation.hi = Returns a greeting
+
+user.controller.api.tags = Rest Api that Controls the actions to consult, create, modify and delete users
+user.controller.apioperation.tags.all = All users data
+user.controller.apioperation.tags.byid = Data by user id
+user.controller.apioperation.tags.create = Create a user
+user.controller.apioperation.tags.update = Update a user
+user.controller.apioperation.tags.delete = Delete a user

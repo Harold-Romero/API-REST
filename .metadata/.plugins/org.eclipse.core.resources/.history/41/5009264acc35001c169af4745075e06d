@@ -1,0 +1,53 @@
+package com.haromerop.crudApi.ApiRestCrud.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.stereotype.Service;
+
+import com.haromerop.crudApi.ApiRestCrud.dto.UserLoginRequest;
+import com.haromerop.crudApi.ApiRestCrud.model.UserLogin;
+import com.haromerop.crudApi.ApiRestCrud.repository.UserLoginRepository;
+
+@Service
+public class UserLoginServiceImpl implements UserLoginService {
+	
+	@Autowired
+	private BCryptPasswordEncoder bCryptPasswordEncoder;
+	
+	@Autowired
+	private UserLoginRepository repository;
+	
+	@Override
+	public UserLogin createUserLogin(UserLoginRequest userLoginRequest) {
+		
+		userLoginRequest.setPass(bCryptPasswordEncoder.encode(userLoginRequest.getPass()));
+		
+		return repository.save(userLoginRequest);
+		
+		/*
+		
+		List<UserLogin> userLoginDb = this.repository.findAll();
+		
+		if (!userLoginDb.isEmpty()) {
+			for (UserLogin a : userLoginDb) {
+				if (a.getUser().equals(userLoginRequest.getUser())){
+					String none = "none";
+					System.out.println(none);
+				}
+			}
+		}
+		UserLogin userLogin = new UserLogin();
+		userLogin.setUser(userLoginRequest.getUser());
+		userLogin.setPass(bCryptPasswordEncoder.encode(userLoginRequest.getPass()));
+		//userLogin.setRol(userLoginRequest.getRol());
+		userLogin.setSession(true);	
+		return repository.save(userLogin);	*/
+	}
+
+	@Override
+	public UserLogin findByUsername(String username) {
+		return repository.findByUsername(username);
+	}	
+}

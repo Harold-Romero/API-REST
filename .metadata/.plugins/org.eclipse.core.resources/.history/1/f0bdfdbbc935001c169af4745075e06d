@@ -1,0 +1,19 @@
+package com.haromerop.crudApi.ApiRestCrud.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+
+import com.haromerop.crudApi.ApiRestCrud.model.UserLogin;
+import com.haromerop.crudApi.ApiRestCrud.service.UserLoginService;
+
+@Controller
+public class LoginController {
+	
+	@Autowired
+	private UserLoginService userLoginService;
+	
+	public String registForm(Model model) {
+		model.addAttribute("usuario", new UserLogin());
+	}
+}

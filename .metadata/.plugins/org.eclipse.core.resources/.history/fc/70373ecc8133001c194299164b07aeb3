@@ -1,0 +1,36 @@
+package com.haromerop.crudApi.ApiRestCrud.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+
+import com.haromerop.crudApi.ApiRestCrud.dto.UserLoginRequest;
+import com.haromerop.crudApi.ApiRestCrud.model.UserLogin;
+import com.haromerop.crudApi.ApiRestCrud.repository.UserLoginRepository;
+
+public class UserLoginServiceImpl implements UserLoginService {
+	
+	@Autowired
+	private BCryptPasswordEncoder bCryptPasswordEncoder;
+	
+	private UserLoginRepository repository;
+	
+	@Override
+	public UserLogin createUserLogin(UserLoginRequest userLoginRequest) {
+		
+		List<UserLogin> userLoginDb = this.repository.findAll();
+		
+		
+		for (UserLogin a : userLoginDb) {
+			if (a.getUser().equals(userLoginRequest.getUser())){
+				UserLogin userLogin = new UserLogin();
+				userLogin.setUser(userLoginRequest.getUser());
+				userLogin.setPass(bCryptPasswordEncoder.encode(userLoginRequest.getPass()));
+				userLogin.setRol(userLoginRequest.getRol());
+				userLogin.setSession(true);	
+				return repository.save(userLogin);
+			}
+		}			
+	}	
+}

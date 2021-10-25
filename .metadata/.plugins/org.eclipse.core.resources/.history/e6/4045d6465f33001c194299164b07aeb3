@@ -1,0 +1,20 @@
+package com.haromerop.crudApi.ApiRestCrud.service;
+
+import com.haromerop.crudApi.ApiRestCrud.dto.UserLoginRequest;
+import com.haromerop.crudApi.ApiRestCrud.model.UserLogin;
+
+public class UserLoginServiceImpl implements UserLoginService {
+
+	@Override
+	public UserLogin createUserLogin(UserLoginRequest userLoginRequest) {
+		
+		return null;
+	}
+
+	@Override
+	public UserLogin getUserByUsername(UserLoginRequest userLoginRequest) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

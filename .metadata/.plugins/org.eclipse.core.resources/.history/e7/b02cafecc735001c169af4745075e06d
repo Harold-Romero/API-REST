@@ -1,0 +1,10 @@
+package com.haromerop.crudApi.ApiRestCrud.controller;
+
+import org.springframework.stereotype.Controller;
+
+@Controller
+public class InicioController {
+	public String inicio() {
+		return "Inicio";
+	}
+}
