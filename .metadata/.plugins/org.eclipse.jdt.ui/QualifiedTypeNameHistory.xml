@@ -1,24 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
     <fullyQualifiedTypeName name="lombok.Data"/>
-    <fullyQualifiedTypeName name="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder"/>
     <fullyQualifiedTypeName name="java.util.Optional"/>
-    <fullyQualifiedTypeName name="com.haromerop.crudApi.ApiRestCrud.service.UserLoginService"/>
     <fullyQualifiedTypeName name="io.swagger.annotations.ApiOperation"/>
     <fullyQualifiedTypeName name="io.swagger.annotations.ApiResponses"/>
     <fullyQualifiedTypeName name="io.swagger.annotations.ApiResponse"/>
-    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PostMapping"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestBody"/>
-    <fullyQualifiedTypeName name="com.haromerop.crudApi.ApiRestCrud.dto.UserLoginRequest"/>
     <fullyQualifiedTypeName name="com.haromerop.crudApi.ApiRestCrud.exception.ApiUnprocessableEntity"/>
     <fullyQualifiedTypeName name="com.haromerop.crudApi.ApiRestCrud.controller.UserLoginController"/>
     <fullyQualifiedTypeName name="com.haromerop.crudApi.ApiRestCrud.service.UserLoginServiceImpl"/>
-    <fullyQualifiedTypeName name="org.springframework.context.annotation.Bean"/>
-    <fullyQualifiedTypeName name="javax.validation.Valid"/>
     <fullyQualifiedTypeName name="org.springframework.http.ResponseEntity"/>
     <fullyQualifiedTypeName name="org.springframework.context.MessageSource"/>
     <fullyQualifiedTypeName name="java.util.List"/>
-    <fullyQualifiedTypeName name="org.springframework.stereotype.Service"/>
     <fullyQualifiedTypeName name="org.springframework.context.annotation.Configuration"/>
     <fullyQualifiedTypeName name="org.springframework.security.config.annotation.web.configuration.EnableWebSecurity"/>
     <fullyQualifiedTypeName name="org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration"/>
@@ -29,9 +22,22 @@
     <fullyQualifiedTypeName name="org.springframework.security.core.userdetails.UsernameNotFoundException"/>
     <fullyQualifiedTypeName name="org.springframework.security.core.userdetails.User"/>
     <fullyQualifiedTypeName name="org.springframework.security.core.authority.SimpleGrantedAuthority"/>
-    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
-    <fullyQualifiedTypeName name="com.haromerop.crudApi.ApiRestCrud.configuration.UserLoginDatailsServiceImpl"/>
-    <fullyQualifiedTypeName name="org.springframework.security.crypto.password.PasswordEncoder"/>
-    <fullyQualifiedTypeName name="com.haromerop.crudApi.ApiRestCrud.model.UserLogin"/>
     <fullyQualifiedTypeName name="com.haromerop.crudApi.ApiRestCrud.configuration.UserLogin"/>
+    <fullyQualifiedTypeName name="com.haromerop.crudApi.ApiRestCrud.configuration.UserLoginDatailsServiceImpl"/>
+    <fullyQualifiedTypeName name="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder"/>
+    <fullyQualifiedTypeName name="org.springframework.security.crypto.password.PasswordEncoder"/>
+    <fullyQualifiedTypeName name="org.springframework.context.annotation.Bean"/>
+    <fullyQualifiedTypeName name="org.springframework.stereotype.Controller"/>
+    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
+    <fullyQualifiedTypeName name="com.haromerop.crudApi.ApiRestCrud.service.UserLoginService"/>
+    <fullyQualifiedTypeName name="org.springframework.ui.Model"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.GetMapping"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PostMapping"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.ModelAttribute"/>
+    <fullyQualifiedTypeName name="com.haromerop.crudApi.ApiRestCrud.model.UserLogin"/>
+    <fullyQualifiedTypeName name="javax.validation.Valid"/>
+    <fullyQualifiedTypeName name="org.springframework.validation.BindingResult"/>
+    <fullyQualifiedTypeName name="org.springframework.stereotype.Service"/>
+    <fullyQualifiedTypeName name="com.haromerop.crudApi.ApiRestCrud.dto.UserLoginRequest"/>
+    <fullyQualifiedTypeName name="com.haromerop.crudApi.ApiRestCrud.repository.GestorUser"/>
 </qualifiedTypeNameHistroy>
